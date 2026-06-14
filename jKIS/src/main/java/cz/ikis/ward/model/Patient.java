@@ -1,4 +1,4 @@
-package cz.ikis.ward;
+package cz.ikis.ward.model;
 
 import java.time.LocalDate;
 
