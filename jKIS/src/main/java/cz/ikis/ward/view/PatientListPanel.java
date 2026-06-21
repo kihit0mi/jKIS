@@ -14,9 +14,9 @@ public class PatientListPanel extends JPanel {
         JLabel titleLabel = new JLabel("Current Patients:");
         JPanel toolbar = new JPanel();
 
-        ToolbarButton refreshBtn = new ToolbarButton("Refresh Data");
-        ToolbarButton exportBtn = new ToolbarButton("Export Data");
-        ToolbarButton detailBtn = new ToolbarButton("View Details");
+        StyledButton refreshBtn = StyledButton.toolbar("Refresh Data");
+        StyledButton exportBtn = StyledButton.toolbar("Export Data");
+        StyledButton detailBtn = StyledButton.toolbar("View Details");
 
         toolbar.add(refreshBtn);
         toolbar.add(exportBtn);
