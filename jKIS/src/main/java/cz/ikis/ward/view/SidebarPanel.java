@@ -8,6 +8,7 @@ public class SidebarPanel extends JPanel{
 
     private StyledButton patientsBtn;
     private StyledButton wardBtn;
+    private StyledButton contactBtn;
 
     public SidebarPanel(){
 
@@ -19,7 +20,7 @@ public class SidebarPanel extends JPanel{
         patientsBtn = StyledButton.sidebar("Patients");
         wardBtn = StyledButton.sidebar("Wards");
         StyledButton manageBtn = StyledButton.sidebar("Manage patients");
-        StyledButton contactBtn = StyledButton.sidebar("Contacts");
+        contactBtn = StyledButton.sidebar("Contacts");
 
         this.add(patientsBtn);
         this.add(Box.createRigidArea(new Dimension(0,15)));
@@ -37,5 +38,9 @@ public class SidebarPanel extends JPanel{
 
     public void addWardsButtonListener(java.awt.event.ActionListener listener) {
         wardBtn.addActionListener(listener);
+    }
+
+    public void addContactsButtonListener(java.awt.event.ActionListener listener) {
+        contactBtn.addActionListener(listener);
     }
 }
