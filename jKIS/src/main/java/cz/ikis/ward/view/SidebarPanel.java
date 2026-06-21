@@ -7,6 +7,7 @@ import java.awt.*;
 public class SidebarPanel extends JPanel{
 
     private StyledButton patientsBtn;
+    private StyledButton wardBtn;
 
     public SidebarPanel(){
 
@@ -16,7 +17,7 @@ public class SidebarPanel extends JPanel{
         this.setBorder(new EmptyBorder(20,20,20,20));
 
         patientsBtn = StyledButton.sidebar("Patients");
-        StyledButton wardBtn = StyledButton.sidebar("Wards");
+        wardBtn = StyledButton.sidebar("Wards");
         StyledButton manageBtn = StyledButton.sidebar("Manage patients");
         StyledButton contactBtn = StyledButton.sidebar("Contacts");
 
@@ -32,5 +33,9 @@ public class SidebarPanel extends JPanel{
 
     public void addPatientsButtonListener(java.awt.event.ActionListener listener) {
         patientsBtn.addActionListener(listener);
+    }
+
+    public void addWardsButtonListener(java.awt.event.ActionListener listener) {
+        wardBtn.addActionListener(listener);
     }
 }

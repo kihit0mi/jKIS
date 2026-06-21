@@ -5,6 +5,7 @@ import cz.ikis.ward.model.PatientService;
 import cz.ikis.ward.view.MainDashboard;
 import cz.ikis.ward.view.PatientListPanel;
 import cz.ikis.ward.view.SidebarPanel;
+import cz.ikis.ward.view.WardPanel;
 
 import java.util.List;
 
@@ -31,6 +32,18 @@ public class NavigationController {
                 PatientListPanel patientList = new PatientListPanel(mockData);
 
                 dashboard.openTabInWorkspace("All Patients", patientList);
+            }
+        });
+
+        sidebar.addWardsButtonListener(e -> {
+
+            if(!dashboard.isTabOpen("Wards")){
+
+                List<Patient> mockData = patientService.getMockPatients();
+
+                WardPanel wardPanel = new WardPanel(mockData);
+
+                dashboard.openTabInWorkspace("Wards", wardPanel);
             }
         });
     }
