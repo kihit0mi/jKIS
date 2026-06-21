@@ -2,6 +2,7 @@ package cz.ikis.ward.controller;
 
 import cz.ikis.ward.model.Patient;
 import cz.ikis.ward.model.PatientService;
+import cz.ikis.ward.view.ContactPanel;
 import cz.ikis.ward.view.MainDashboard;
 import cz.ikis.ward.view.PatientListPanel;
 import cz.ikis.ward.view.SidebarPanel;
@@ -44,6 +45,16 @@ public class NavigationController {
                 WardPanel wardPanel = new WardPanel(mockData);
 
                 dashboard.openTabInWorkspace("Wards", wardPanel);
+            }
+        });
+
+        sidebar.addContactsButtonListener(e -> {
+
+            if(!dashboard.isTabOpen("Contacts")){
+
+                ContactPanel contactPanel = new ContactPanel();
+
+                dashboard.openTabInWorkspace("Contacts", contactPanel);
             }
         });
     }
