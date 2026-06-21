@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class SidebarPanel extends JPanel{
 
-    private SidebarButton patientsBtn;
+    private StyledButton patientsBtn;
 
     public SidebarPanel(){
 
@@ -15,10 +15,10 @@ public class SidebarPanel extends JPanel{
         this.setBackground(new Color(79, 166, 209));
         this.setBorder(new EmptyBorder(20,20,20,20));
 
-        patientsBtn = new SidebarButton("Patients");
-        SidebarButton wardBtn = new SidebarButton("Wards");
-        SidebarButton manageBtn = new SidebarButton("Manage patients");
-        SidebarButton contactBtn = new SidebarButton("Contacts");
+        patientsBtn = StyledButton.sidebar("Patients");
+        StyledButton wardBtn = StyledButton.sidebar("Wards");
+        StyledButton manageBtn = StyledButton.sidebar("Manage patients");
+        StyledButton contactBtn = StyledButton.sidebar("Contacts");
 
         this.add(patientsBtn);
         this.add(Box.createRigidArea(new Dimension(0,15)));
